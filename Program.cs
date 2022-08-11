@@ -68,7 +68,7 @@ namespace ForReal
         static float[,] Mutation(float[,] Offsprings, int Offspring_num){
             var rand = new Random();
             for(int i = 0; i<Offspring_num; i++){
-                double x = rand.NextDouble();  //0% ~ 100%의 변이
+                double x = rand.NextDouble()*2;  //0% ~ 200%의 변이
                 float y = Convert.ToSingle(x);
                 Offsprings[i, rand.Next(0, Offspring_Length)] *= y;
             }
